@@ -359,7 +359,7 @@ export default {
       preuPersonaDia: 30.3,
       pctIns: 10,
       gastosMaterial: 100,
-      materialBaseInfant: 10,
+      materialBaseInfant: 5,
       materialInfantDia: 1,
       devolucioIns: 0,
       pctMoni: 0,
