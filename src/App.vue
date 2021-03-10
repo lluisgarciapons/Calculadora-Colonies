@@ -357,7 +357,7 @@ export default {
       checkbox: false,
       llindar: 15,
       preuPersonaDia: 30.3,
-      pctIns: 10,
+      pctIns: 11,
       gastosMaterial: 100,
       materialBaseInfant: 5,
       materialInfantDia: 1,
@@ -401,6 +401,8 @@ export default {
       return pagamentPerInfant * this.infants;
     },
     calculMonis() {
+      if (!this.checkbox || this.llindar == null || this.llindar == 0)
+        return this.monis;
       let reduccio = Math.floor(this.infants / this.llindar);
       return this.monis - reduccio;
     },
