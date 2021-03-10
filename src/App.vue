@@ -13,7 +13,9 @@
                 append-outer-icon="mdi-add"
                 @click:append-outer="increment"
                 @click:prepend="decrement"
-                :rules="[v => (!isNaN(parseFloat(v)) && v > 0) || 'Obligatori']"
+                :rules="[
+                  (v) => (!isNaN(parseFloat(v)) && v > 0) || 'Obligatori',
+                ]"
               ></v-text-field>
             </v-flex>
 
@@ -25,7 +27,9 @@
                 append-outer-icon="mdi-add"
                 @click:append-outer="increment"
                 @click:prepend="decrement"
-                :rules="[v => (!isNaN(parseFloat(v)) && v > 0) || 'Obligatori']"
+                :rules="[
+                  (v) => (!isNaN(parseFloat(v)) && v > 0) || 'Obligatori',
+                ]"
               ></v-text-field>
             </v-flex>
 
@@ -37,14 +41,18 @@
                 append-outer-icon="mdi-add"
                 @click:append-outer="increment"
                 @click:prepend="decrement"
-                :rules="[v => (!isNaN(parseFloat(v)) && v > 0) || 'Obligatori']"
+                :rules="[
+                  (v) => (!isNaN(parseFloat(v)) && v > 0) || 'Obligatori',
+                ]"
               ></v-text-field>
             </v-flex>
           </v-layout>
 
           <v-expansion-panels class="mb-5">
             <v-expansion-panel>
-              <v-expansion-panel-header>Opcions avançades</v-expansion-panel-header>
+              <v-expansion-panel-header
+                >Opcions avançades</v-expansion-panel-header
+              >
               <v-expansion-panel-content>
                 <v-layout row wrap justify-center>
                   <v-flex xs12 sm4 md4>
@@ -66,9 +74,14 @@
                     >
                       <v-tooltip slot="append" top>
                         <template v-slot:activator="{ on }">
-                          <v-icon v-on="on" color="primary" dark>mdi-help-circle-outline</v-icon>
+                          <v-icon v-on="on" color="primary" dark
+                            >mdi-help-circle-outline</v-icon
+                          >
                         </template>
-                        <span>Algunes cases ofereixen l'estada d'un monitor gratuïta depenent del nombre d'infants</span>
+                        <span
+                          >Algunes cases ofereixen l'estada d'un monitor
+                          gratuïta depenent del nombre d'infants</span
+                        >
                       </v-tooltip>
                     </v-text-field>
                   </v-flex>
@@ -84,13 +97,21 @@
                       append-outer-icon="mdi-add"
                       @click:append-outer="increment"
                       @click:prepend="decrement"
-                      :rules="[v => (!isNaN(parseFloat(v)) && v >= 0) || 'Obligatori']"
+                      :rules="[
+                        (v) =>
+                          (!isNaN(parseFloat(v)) && v >= 0) || 'Obligatori',
+                      ]"
                     >
                       <v-tooltip slot="append" top>
                         <template v-slot:activator="{ on }">
-                          <v-icon v-on="on" color="primary" dark>mdi-help-circle-outline</v-icon>
+                          <v-icon v-on="on" color="primary" dark
+                            >mdi-help-circle-outline</v-icon
+                          >
                         </template>
-                        <span>Preu Pensió Completa per persona per un dia d'estada</span>
+                        <span
+                          >Preu Pensió Completa per persona per un dia
+                          d'estada</span
+                        >
                       </v-tooltip>
                     </v-text-field>
                   </v-flex>
@@ -104,13 +125,23 @@
                       append-outer-icon="mdi-add"
                       @click:append-outer="increment"
                       @click:prepend="decrement"
-                      :rules="[v => (!isNaN(parseFloat(v)) && v >= 0 && v<= 100) || 'Obligatori entre 0 i 100']"
+                      :rules="[
+                        (v) =>
+                          (!isNaN(parseFloat(v)) && v >= 0 && v <= 100) ||
+                          'Obligatori entre 0 i 100',
+                      ]"
                     >
                       <v-tooltip slot="append" top>
                         <template v-slot:activator="{ on }">
-                          <v-icon v-on="on" color="primary" dark>mdi-help-circle-outline</v-icon>
+                          <v-icon v-on="on" color="primary" dark
+                            >mdi-help-circle-outline</v-icon
+                          >
                         </template>
-                        <span>Percentatge del preu de l'estada de l'infant que s'afegeix al total per cobrir qualsevol imprevist</span>
+                        <span
+                          >Percentatge del preu de l'estada de l'infant que
+                          s'afegeix al total per cobrir qualsevol
+                          imprevist</span
+                        >
                       </v-tooltip>
                     </v-text-field>
                   </v-flex>
@@ -123,13 +154,21 @@
                       append-outer-icon="mdi-add"
                       @click:append-outer="increment"
                       @click:prepend="decrement"
-                      :rules="[v => (!isNaN(parseFloat(v)) && v >= 0) || 'Obligatori']"
+                      :rules="[
+                        (v) =>
+                          (!isNaN(parseFloat(v)) && v >= 0) || 'Obligatori',
+                      ]"
                     >
                       <v-tooltip slot="append" top>
                         <template v-slot:activator="{ on }">
-                          <v-icon v-on="on" color="primary" dark>mdi-help-circle-outline</v-icon>
+                          <v-icon v-on="on" color="primary" dark
+                            >mdi-help-circle-outline</v-icon
+                          >
                         </template>
-                        <span>Cost estimat del material necessari per les colònies</span>
+                        <span
+                          >Cost estimat del material necessari per les
+                          colònies</span
+                        >
                       </v-tooltip>
                     </v-text-field>
                   </v-flex>
@@ -143,13 +182,20 @@
                       append-outer-icon="mdi-add"
                       @click:append-outer="increment"
                       @click:prepend="decrement"
-                      :rules="[v => (!isNaN(parseFloat(v)) && v >= 0) || 'Obligatori']"
+                      :rules="[
+                        (v) =>
+                          (!isNaN(parseFloat(v)) && v >= 0) || 'Obligatori',
+                      ]"
                     >
                       <v-tooltip slot="append" top>
                         <template v-slot:activator="{ on }">
-                          <v-icon v-on="on" color="primary" dark>mdi-help-circle-outline</v-icon>
+                          <v-icon v-on="on" color="primary" dark
+                            >mdi-help-circle-outline</v-icon
+                          >
                         </template>
-                        <span>Preu base destinat a material per cada infant</span>
+                        <span
+                          >Preu base destinat a material per cada infant</span
+                        >
                       </v-tooltip>
                     </v-text-field>
                   </v-flex>
@@ -162,13 +208,21 @@
                       append-outer-icon="mdi-add"
                       @click:append-outer="increment"
                       @click:prepend="decrement"
-                      :rules="[v => (!isNaN(parseFloat(v)) && v >= 0) || 'Obligatori']"
+                      :rules="[
+                        (v) =>
+                          (!isNaN(parseFloat(v)) && v >= 0) || 'Obligatori',
+                      ]"
                     >
                       <v-tooltip slot="append" top>
                         <template v-slot:activator="{ on }">
-                          <v-icon v-on="on" color="primary" dark>mdi-help-circle-outline</v-icon>
+                          <v-icon v-on="on" color="primary" dark
+                            >mdi-help-circle-outline</v-icon
+                          >
                         </template>
-                        <span>Preu destinat a material per cada infant per cada dia d'estada</span>
+                        <span
+                          >Preu destinat a material per cada infant per cada dia
+                          d'estada</span
+                        >
                       </v-tooltip>
                     </v-text-field>
                   </v-flex>
@@ -181,13 +235,21 @@
                       append-outer-icon="mdi-add"
                       @click:append-outer="increment"
                       @click:prepend="decrement"
-                      :rules="[v => (!isNaN(parseFloat(v)) && v >= 0) || 'Obligatori']"
+                      :rules="[
+                        (v) =>
+                          (!isNaN(parseFloat(v)) && v >= 0) || 'Obligatori',
+                      ]"
                     >
                       <v-tooltip slot="append" top>
                         <template v-slot:activator="{ on }">
-                          <v-icon v-on="on" color="primary" dark>mdi-help-circle-outline</v-icon>
+                          <v-icon v-on="on" color="primary" dark
+                            >mdi-help-circle-outline</v-icon
+                          >
                         </template>
-                        <span>Quantitat retornada famílies i llars per infant per no haver pogut acabar el curs 19-20</span>
+                        <span
+                          >Quantitat retornada famílies i llars per infant per
+                          no haver pogut acabar el curs 19-20</span
+                        >
                       </v-tooltip>
                     </v-text-field>
                   </v-flex>
@@ -201,13 +263,23 @@
                       append-outer-icon="mdi-add"
                       @click:append-outer="increment"
                       @click:prepend="decrement"
-                      :rules="[v => (!isNaN(parseFloat(v)) && v >= 0 && v <= 100) || 'Obligatori entre 0 i 100']"
+                      :rules="[
+                        (v) =>
+                          (!isNaN(parseFloat(v)) && v >= 0 && v <= 100) ||
+                          'Obligatori entre 0 i 100',
+                      ]"
                     >
                       <v-tooltip slot="append" top>
                         <template v-slot:activator="{ on }">
-                          <v-icon v-on="on" color="primary" dark>mdi-help-circle-outline</v-icon>
+                          <v-icon v-on="on" color="primary" dark
+                            >mdi-help-circle-outline</v-icon
+                          >
                         </template>
-                        <span>percentatge (0-100) del cost de l'estada a pagar per cada moni, on 0 és gratis i 100 paga la totalitat</span>
+                        <span
+                          >percentatge (0-100) del cost de l'estada a pagar per
+                          cada moni, on 0 és gratis i 100 paga la
+                          totalitat</span
+                        >
                       </v-tooltip>
                     </v-text-field>
                   </v-flex>
@@ -215,17 +287,27 @@
               </v-expansion-panel-content>
             </v-expansion-panel>
           </v-expansion-panels>
-          <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate">Calcula</v-btn>
+          <v-btn
+            :disabled="!valid"
+            color="success"
+            class="mr-4"
+            @click="validate"
+            >Calcula</v-btn
+          >
 
           <!-- <v-btn color="error" class="mr-4" @click="reset">Reset Formulari</v-btn> -->
         </v-form>
 
-        <v-timeline v-if="balancTotal" align-top :dense="$vuetify.breakpoint.smAndDown">
+        <v-timeline
+          v-if="balancTotal"
+          align-top
+          :dense="$vuetify.breakpoint.smAndDown"
+        >
           <v-timeline-item color="green lighten-2">
             <v-card color="green lighten-2" dark class="text-center">
               <v-card-title class="title">Preu per Infant</v-card-title>
               <v-card-text class="white text--primary">
-                <p class="resultat">{{preuPerInfant}}€</p>
+                <p class="resultat">{{ preuPerInfant }}€</p>
               </v-card-text>
             </v-card>
           </v-timeline-item>
@@ -234,7 +316,7 @@
             <v-card color="green lighten-2" dark class="text-center">
               <v-card-title class="title">A pagar cada Moni</v-card-title>
               <v-card-text class="white text--primary">
-                <p class="resultat">{{aPagarPerMoni}}€</p>
+                <p class="resultat">{{ aPagarPerMoni }}€</p>
               </v-card-text>
             </v-card>
           </v-timeline-item>
@@ -244,8 +326,15 @@
               <v-card-title class="title">Balanç Total</v-card-title>
               <v-card-text class="white text--primary">
                 <p
-                  v-bind:class="[balancTotal>0 ? 'green--text text--darken-2' : 'red--text text--darken-2', 'resultat']"
-                >{{balancTotal}}€</p>
+                  v-bind:class="[
+                    balancTotal > 0
+                      ? 'green--text text--darken-2'
+                      : 'red--text text--darken-2',
+                    'resultat',
+                  ]"
+                >
+                  {{ balancTotal }}€
+                </p>
               </v-card-text>
             </v-card>
           </v-timeline-item>
@@ -265,20 +354,20 @@ export default {
       dies: null,
       infants: null,
       monis: null,
-      checkbox: true,
+      checkbox: false,
       llindar: 15,
-      preuPersonaDia: 31.9,
+      preuPersonaDia: 30.3,
       pctIns: 10,
       gastosMaterial: 100,
       materialBaseInfant: 10,
       materialInfantDia: 1,
-      devolucioIns: 15,
+      devolucioIns: 0,
       pctMoni: 0,
 
       balancTotal: null,
       ingressosTotals: null,
       aPagarPerMoni: null,
-      preuPerInfant: null
+      preuPerInfant: null,
     };
   },
 
@@ -335,8 +424,8 @@ export default {
         this.aPagarMonis() -
         this.gastos()
       ).toFixed(2);
-    }
-  }
+    },
+  },
 };
 </script>
 
